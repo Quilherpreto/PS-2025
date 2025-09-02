@@ -11,10 +11,10 @@ questions = [
     "Charada 2:\n\n*Essa é a coisa que a tudo devora*\n\n*Feras, aves, plantas, flora.*\n\n*Aço e ferro são sua comida,*\n\n*E a dura pedra por ele moída;*\n\n*Aos reis abate, à cidade arruína,*\n\n*E a alta montanha faz pequenina.*",
     "Charada 3:\n\nJuntos, um Mago, um Cavalheiro, um Bárbaro e um Eremita receberam 70 Esmeraldas.\n\nCada um recebeu um número inteiro de Esmeraldas e cada um recebeu pelo menos um.\n\nO Mago recebeu mais do que cada um dos outros.\n\nO Cavalheiro e o Bárbaro receberam, juntos, 45 Esmeraldas.\n\nQuantas Esmeraldas sobraram para o Eremita?",
     "Charada 4:\n\nCerto dia, um sábio matemático, disposto de seu Camelo, caminhavam longamente em direção à cidade de Bagdá. No entanto, em seu caminho, encontrou três irmãos em profundo debate. Ao se informar da situação, eis o problema:\n\n• Um antigo nobre partiu em sua jornada final e deixou 17 Camelos como herança para a partilha entre seus três filhos, ordenando a seguinte divisão:\n• O mais velho deverá receber a metade.\n• O do meio deverá receber a terça parte.\n• O mais novo deverá receber apenas a nona parte.\n\nPorém, ao tentar dividir, os irmãos se desesperaram: 17 não se divide exatamente nessas partes.\n\nQuantos Camelos serão dispostos a cada irmão de modo que a partilha seja exata e ninguém fique em desvantagem?\n\n(Separe os números encontrados por vírgula e sem espaços)",
-    "Charada 5:\nSou um número primo menor que 10.\nSe me multiplicarem por 4, subtraírem 10 e depois dividirem por 2, obterão 9.\nQual é o meu número??",
-    "Charada 6:\nUm corpo acelerando em direção ao rosto do seu amigo a 10 m/s²\ntem massa similar a de uma xícara de 200 g,\nqual a força mínima que você tem que aplicar para que ele não se machuque.",
-    "Parabéns, você concluiu a PRIMEIRA etapa! Agora seu desafio será muito maior, o que teremos a seguir nesse hangar de naves? Boa sorte!\n\nEm um hangar de naves,\nEncontrei um tesouro perdido,\nCom ele, posso montar um código,\nQue, em um mundo digital,\nMe levará a um novo caminho.",
-    "Meu Deus, você não desiste hein, vamos dificultar um pouquinho agora!\n\nAgora vamos pegar você espertinho!\n\nEm uma espaçonave,\nDois mistérios estão escondidos,\nUm deles é uma cifra,\nO outro é uma chave.\nJuntos, eles formam um mistério,\nMas qual é esse mistério?",
+    "Charada 5:\n\nObserve atentamente esta sequência numérica:\n\n1, 4, 9, 16, 25, __ ?\n\nQual é o próximo número e por quê?\n\nResponda apenas o número que completa a sequência.",
+    "Charada 6:\n\nVocê tem 3 caixas: uma com bolas vermelhas, uma com bolas azuis, e uma com bolas mistas (vermelhas e azuis).\n\nTodas as etiquetas das caixas estão trocadas.\n\nVocê pode tirar apenas 1 bola de uma caixa para descobrir o conteúdo de todas.\n\nDe qual caixa você deve tirar?\n\nResponda: vermelhas, azuis ou mistas",
+    "Charada 7:\n\nEm uma família há 5 meninas e alguns meninos.\n\nO número total de filhos é 8.\n\nQuantos meninos há na família?\n\nResponda apenas o número.",
+    "Charada 8:\n\nUm pai tem 32 anos e seu filho tem 8 anos.\n\nEm quantos anos a idade do pai será o dobro da idade do filho?\n\nResponda apenas o número de anos.",
 ]
 
 answers = [
@@ -22,10 +22,10 @@ answers = [
     "tempo",   # Charada 2 - O Hobbit
     "1",       # Charada 3 - Esmeraldas do Eremita
     "9,6,2",   # Charada 4 - Divisão dos Camelos
-    "1",  # 7
-    "1",  # 2
-    "onepieto",  # Dica : O tesouro perdido são as peças do ábaco, que representam os dígitos de um número na tabela ASCII.
-    "1",
+    "36",      # Charada 5 - Sequência dos quadrados perfeitos
+    "mistas",  # Charada 6 - Problema das caixas com bolas
+    "3",       # Charada 7 - Problema simples dos meninos (8 total - 5 meninas = 3 meninos)
+    "16",      # Charada 8 - Problema das idades (em 16 anos: pai 48, filho 24)
 ]
 
 # Dicas para cada charada
@@ -34,10 +34,10 @@ hints = [
     "Dica: Pense no que desgasta tudo, envelhece reis e montanhas. Uma palavra de 5 letras...",
     "Dica: Total = 70. Cavalheiro + Bárbaro = 45. Restam 25 para Mago + Eremita. O Mago tem mais que todos os outros...",
     "Dica: O sábio emprestou seu camelo! Com 18 camelos: metade=9, terça parte=6, nona parte=2. Total: 17!",
-    "Dica: Teste cada primo menor que 10 na fórmula: (x × 4 - 10) ÷ 2 = 9",
-    "Dica: Use F = m × a. Massa = 200g = 0,2kg, aceleração = 10 m/s²",
-    "Dica: 'onepieto' pode estar relacionado com One Piece + algo mais...",
-    "Dica: Pense em criptografia. Cifra + Chave = ?",
+    "Dica: Pense nos quadrados! 1² = 1, 2² = 4, 3² = 9... Qual seria 6²?",
+    "Dica: Tire da caixa que tem certeza de que não é o que está escrito. Qual caixa te dará mais informação?",
+    "Dica: Uma conta simples! Se há 5 meninas e o total é 8 filhos, quantos meninos restam? 8 - 5 = ?",
+    "Dica: Pai: 32+x anos, Filho: 8+x anos. Quando pai = 2×filho? Monte a equação: 32+x = 2(8+x)",
 ]
 
 # Índice da pergunta atual
@@ -146,7 +146,7 @@ Duas máquinas místicas aguardam em silêncio...
 
 Uma delas guarda frequências perdidas no tempo,
 Ondas que atravessam dimensões...
-Um RÁDIO de origens desconhecidas...
+Uma LUZ de origens desconhecidas...
 
 Após conquistar o xadrez,
 As frequências se revelarão,
@@ -156,9 +156,7 @@ E você descobrirá que nem tudo
 ═══════════════════════════════════════════════════════════════
 
 A aventura está apenas começando...
-O tempo é precioso - CORRA!
-
-As máquinas... elas estão esperando...""",
+O tempo é precioso - CORRA!""",
                 fg="gold",
                 bg="black",
                 font=("Courier", 16),
