@@ -15,6 +15,7 @@ questions = [
     "Charada 6:\n\nVocê tem 3 caixas: uma com bolas vermelhas, uma com bolas azuis, e uma com bolas mistas (vermelhas e azuis).\n\nTodas as etiquetas das caixas estão trocadas.\n\nVocê pode tirar apenas 1 bola de uma caixa para descobrir o conteúdo de todas.\n\nDe qual caixa você deve tirar?\n\nResponda: vermelhas, azuis ou mistas",
     "Charada 7:\n\nEm uma família há 5 meninas e alguns meninos.\n\nO número total de filhos é 8.\n\nQuantos meninos há na família?\n\nResponda apenas o número.",
     "Charada 8:\n\nUm pai tem 32 anos e seu filho tem 8 anos.\n\nEm quantos anos a idade do pai será o dobro da idade do filho?\n\nResponda apenas o número de anos.",
+    "DESAFIO FINAL - XADREZ:\n\nPARABÉNS! Você decifrou todos os enigmas do templo!\n\nAgora, para escapar definitivamente, você deve resolver o último mistério:\n\nO TABULEIRO DE XADREZ na sala contém a chave final.\n\nExamine-o cuidadosamente e encontre o CÓDIGO SECRETO.\n\nQuando descobrir, digite-o aqui para prosseguir.\n\n(Procure nas peças, no tabuleiro ou ao redor dele)",
 ]
 
 answers = [
@@ -26,6 +27,7 @@ answers = [
     "mistas",  # Charada 6 - Problema das caixas com bolas
     "3",       # Charada 7 - Problema simples dos meninos (8 total - 5 meninas = 3 meninos)
     "16",      # Charada 8 - Problema das idades (em 16 anos: pai 48, filho 24)
+    "XADREZ2025",  # Desafio Final - Código do tabuleiro de xadrez (você define este código)
 ]
 
 # Dicas para cada charada
@@ -38,6 +40,7 @@ hints = [
     "Dica: Tire da caixa que tem certeza de que não é o que está escrito. Qual caixa te dará mais informação?",
     "Dica: Uma conta simples! Se há 5 meninas e o total é 8 filhos, quantos meninos restam? 8 - 5 = ?",
     "Dica: Pai: 32+x anos, Filho: 8+x anos. Quando pai = 2×filho? Monte a equação: 32+x = 2(8+x)",
+    "Dica: Examine o tabuleiro físico na sala! Procure por peças em posições especiais, anotações ou códigos escondidos.",
 ]
 
 # Índice da pergunta atual
@@ -58,6 +61,12 @@ time_left = 2400  # 40 minutos
 # Função para mostrar dica
 def show_hint():
     global time_left, hint_used
+    
+    # Não permitir dicas no desafio do xadrez (última pergunta)
+    if question_index == len(questions) - 1:
+        messagebox.showinfo("Desafio Direto", "Este é um desafio físico! Examine o tabuleiro de xadrez na sala para encontrar o código.")
+        return
+    
     if not hint_used:
         # Penalizar em 60 segundos
         time_left -= 60
@@ -113,58 +122,79 @@ def check_answer():
             question.config(text=questions[question_index])
             # Limpar a entrada de texto
             answer_entry.delete(0, "end")
+            
+            # Desabilitar dicas no desafio do xadrez (última pergunta)
+            if question_index == len(questions) - 1:  # É o desafio do xadrez
+                hint_button.config(state=DISABLED, text="SEM DICAS - BUSQUE FISICAMENTE", bg="gray", fg="black")
+                hint_label.config(text="⚔️ DESAFIO DIRETO: Examine o tabuleiro na sala! ⚔️")
         else:
-            # Tela final épica - esconder elementos do jogo (mas manter o timer)
+            # TELA FINAL ENIGMÁTICA - esconder todos os elementos do jogo
             question.pack_forget()
             hint_label.pack_forget()
             answer_entry.pack_forget()
             hint_button.pack_forget()
             check_button.pack_forget()
+            timer_label.pack_forget()
             
-            # Criar tela final misteriosa
+            # Criar tela final misteriosa para o código morse
             final_screen = Label(
                 root,
-                text="""PARABÉNS, AVENTUREIRO!
+                text="""═══════════════════════════════════════════════════════════════
 
-Você decifrou todos os enigmas antigos com maestria!
-Como um verdadeiro explorador, superou cada desafio com coragem.
+🏆 MISSÃO CONCLUÍDA COM SUCESSO! 🏆
 
-═══════════════════════════════════════════════════════════════
-
-O TEMPLO REVELA SEUS SEGREDOS...
-
-PRÓXIMA MISSÃO: 
-Dirija-se rapidamente ao TABULEIRO DE XADREZ!
-Lá encontrará seu próximo desafio arqueológico.
+Você decifrou todos os enigmas e o código do xadrez!
+Como um verdadeiro arqueólogo, superou cada desafio.
 
 ═══════════════════════════════════════════════════════════════
 
-MISTÉRIO FINAL:
+⚡ O ÚLTIMO MISTÉRIO AGUARDA ⚡
 
-Sussurros ecoam pelas paredes antigas...
-Duas máquinas místicas aguardam em silêncio...
+Uma antiga lâmpada começa a piscar mysteriosamente...
+Luzes que dançam em padrões ancestrais...
+Mensagens codificadas através da luz e sombra...
 
-Uma delas guarda frequências perdidas no tempo,
-Ondas que atravessam dimensões...
-Uma LUZ de origens desconhecidas...
+👁️ OBSERVE ATENTAMENTE OS SINAIS DE LUZ 👁️
 
-Após conquistar o xadrez,
-As frequências se revelarão,
-E você descobrirá que nem tudo
-É o que parece ser...
+A lâmpada revelará sequências secretas...
+Pontos e traços perdidos no tempo...
+Um código que abrirá o cadeado final...
 
 ═══════════════════════════════════════════════════════════════
 
-A aventura está apenas começando...
-O tempo é precioso - CORRA!""",
+⚠️  INSTRUÇÕES FINAIS  ⚠️
+
+1. Aguarde a lâmpada começar a piscar
+2. Anote cada sequência de luz
+3. Decodifique a mensagem ancestral  
+4. Use o código para abrir o cadeado
+5. Descubra o tesouro final!
+
+═══════════════════════════════════════════════════════════════
+
+A aventura está quase no fim...
+Que a luz guie seus passos! ⚡✨""",
                 fg="gold",
                 bg="black",
-                font=("Courier", 16),
+                font=("Courier", 14),
                 justify=CENTER
             )
             final_screen.pack(expand=True)
-            # Timer continua visível na tela final
-            timer_label.pack(pady=10)
+            
+            # Fazer a tela piscar sutilmente para simular a lâmpada
+            def piscar_tela():
+                cores = ["black", "#0a0a0a", "black", "#050505"]
+                cor_atual = 0
+                def alternar_cor():
+                    nonlocal cor_atual
+                    root.configure(bg=cores[cor_atual % len(cores)])
+                    final_screen.configure(bg=cores[cor_atual % len(cores)])
+                    cor_atual += 1
+                    root.after(1500, alternar_cor)
+                alternar_cor()
+            
+            # Iniciar o efeito de piscar após 2 segundos
+            root.after(2000, piscar_tela)
     else:
         # Incrementar contador de erros na pergunta atual
         errors_count += 1
@@ -260,7 +290,7 @@ def start_game():
 # Tela inicial
 title_label = Label(
     root, 
-    text="EXPEDIÇÃO ARQUEOLÓGICA\nTEMPLO DOS ENIGMAS PERDIDOS\n\nVocê adentra um templo misterioso com 8 câmaras antigas!\nCada câmara guarda um enigma ancestral que deve ser decifrado.\n\nTEMPO LIMITE: 40 minutos antes que as armadilhas se ativem!\n\nSISTEMA DE PENALIDADES POR CÂMARA:\n• 1º erro: Perigos menores (-5s)\n• 2º erro: Armadilhas ativadas (-10s) \n• 3º+ erro: Fuga urgente (-15s)\n• Pedir ajuda aos deuses: (-60s)\n\nQue os antigos o protejam nesta jornada!", 
+    text="EXPEDIÇÃO ARQUEOLÓGICA\nTEMPLO DOS ENIGMAS PERDIDOS\n\nVocê adentra um templo misterioso com 8 câmaras antigas!\nCada câmara guarda um enigma ancestral que deve ser decifrado.\n\nApós as charadas, o DESAFIO FINAL DO XADREZ o aguarda!\n\nTEMPO LIMITE: 40 minutos antes que as armadilhas se ativem!\n\nSISTEMA DE PENALIDADES POR CÂMARA:\n• 1º erro: Perigos menores (-5s)\n• 2º erro: Armadilhas ativadas (-10s) \n• 3º+ erro: Fuga urgente (-15s)\n• Pedir ajuda aos deuses: (-60s)\n\nQue os antigos o protejam nesta jornada!", 
     fg="gold", 
     bg="black", 
     font=("Helvetica", 20),
