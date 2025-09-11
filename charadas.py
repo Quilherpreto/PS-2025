@@ -112,8 +112,65 @@ def check_answer():
             check_button.pack_forget()
             timer_label.pack_forget()
             
-            final_screen = Label(root, text="🏆 MISSÃO CONCLUÍDA! 🏆\n\n⚡ O ÚLTIMO MISTÉRIO AGUARDA ⚡\n\nObserve a lâmpada piscar...", fg="gold", bg="black", font=("Courier", 16), justify=CENTER)
+            final_screen = Label(
+                root, 
+                text="""🏆 MISSÃO CONCLUÍDA COM SUCESSO! 🏆
+
+Você decifrou todos os enigmas e o código do xadrez!
+Como um verdadeiro arqueólogo, superou cada desafio.
+
+═══════════════════════════════════════════════════════════════
+
+⚡ O ÚLTIMO MISTÉRIO AGUARDA ⚡
+
+Uma antiga lâmpada começa a piscar mysteriosamente...
+Luzes que dançam em padrões ancestrais...
+Mensagens codificadas através da luz e sombra...
+
+👁️ OBSERVE ATENTAMENTE OS SINAIS DE LUZ 👁️
+
+A lâmpada revelará sequências secretas...
+Pontos e traços perdidos no tempo...
+Um código que abrirá o cadeado final...
+
+═══════════════════════════════════════════════════════════════
+
+⚠️  INSTRUÇÕES FINAIS  ⚠️
+
+1. Aguarde a lâmpada começar a piscar
+2. Anote cada sequência de luz
+3. Decodifique a mensagem ancestral  
+4. Use o código para abrir o cadeado
+5. Encontre o DROIDINHO DE CRISTAL escondido!
+
+═══════════════════════════════════════════════════════════════
+
+🔍 PROCUREM A LUZ QUE REVELARÁ O TESOURO FINAL! 🔍
+O Droidinho de cristal os aguarda...
+
+A aventura está quase no fim...
+Que a luz guie seus passos! ⚡✨""", 
+                fg="gold", 
+                bg="black", 
+                font=("Courier", 14), 
+                justify=CENTER
+            )
             final_screen.pack(expand=True)
+            
+            # Fazer a tela piscar sutilmente para simular a lâmpada
+            def piscar_tela():
+                cores = ["black", "#0a0a0a", "black", "#050505"]
+                cor_atual = 0
+                def alternar_cor():
+                    nonlocal cor_atual
+                    root.configure(bg=cores[cor_atual % len(cores)])
+                    final_screen.configure(bg=cores[cor_atual % len(cores)])
+                    cor_atual += 1
+                    root.after(1500, alternar_cor)
+                alternar_cor()
+            
+            # Iniciar o efeito de piscar após 2 segundos
+            root.after(2000, piscar_tela)
     else:
         errors_count += 1
         if errors_count == 1:
@@ -192,7 +249,7 @@ def start_game():
 # Tela inicial
 title_label = Label(
     root, 
-    text="EXPEDIÇÃO ARQUEOLÓGICA\nTEMPLO DOS ENIGMAS PERDIDOS\n\nVocê adentra um templo misterioso com 6 câmaras antigas!\nCada câmara guarda um enigma ancestral que deve ser decifrado.\n\nApós as charadas, o DESAFIO FINAL DO XADREZ o aguarda!\n\nTEMPO LIMITE: 40 minutos antes que as armadilhas se ativem!\n\nSISTEMA DE PENALIDADES POR CÂMARA:\n• 1º erro: Perigos menores (-5s)\n• 2º erro: Armadilhas ativadas (-10s) \n• 3º+ erro: Fuga urgente (-15s)\n\n🔮 SISTEMA DE ORÁCULOS E DICAS ANCESTRAIS 🔮\nCada charada possui APENAS 1 DICA ÚNICA!\nOs 2 LADOS devem decidir estrategicamente quando usar:\n• Oráculos Simples: 1 dica fácil (-5 minutos)\n• Oráculos Complexos: 1 dica média (-3 minutos)\n• Oráculos Supremos: 1 dica difícil (-2 minutos)\n\n🚫 ATENÇÃO EXPLORADORES! 🚫\nNÃO APERTEM O BOTÃO VERMELHO!\nEle desconta tempo precioso da expedição!\nApenas os MESTRES da expedição podem ativá-lo!\n\nUma vez usado, não há mais dicas para aquela charada!\nEscolham sabiamente o momento certo!\n\nQue os antigos o protejam nesta jornada!", 
+    text="EXPEDIÇÃO ARQUEOLÓGICA\nTEMPLO DOS ENIGMAS PERDIDOS\n\nVocê adentra um templo misterioso com 6 câmaras antigas!\nCada câmara guarda um enigma ancestral que deve ser decifrado.\n\nApós as charadas, o DESAFIO FINAL DO XADREZ o aguarda!\nE por fim, encontrem o lendário DROIDINHO DE CRISTAL!\n\nTEMPO LIMITE: 40 minutos antes que as armadilhas se ativem!\n\nSISTEMA DE PENALIDADES POR CÂMARA:\n• 1º erro: Perigos menores (-5s)\n• 2º erro: Armadilhas ativadas (-10s) \n• 3º+ erro: Fuga urgente (-15s)\n\n🔮 SISTEMA DE ORÁCULOS E DICAS ANCESTRAIS 🔮\nCada charada possui APENAS 1 DICA ÚNICA!\nOs 2 LADOS devem decidir estrategicamente quando usar:\n• Oráculos Simples: 1 dica fácil (-5 minutos)\n• Oráculos Complexos: 1 dica média (-3 minutos)\n• Oráculos Supremos: 1 dica difícil (-2 minutos)\n\n🚫 ATENÇÃO EXPLORADORES! 🚫\nNÃO APERTEM O BOTÃO VERMELHO!\nEle desconta tempo precioso da expedição!\nApenas os MESTRES da expedição podem ativá-lo!\n\nUma vez usado, não há mais dicas para aquela charada!\nEscolham sabiamente o momento certo!\n\n🤖 OBJETIVO FINAL: Encontrar o DROIDINHO DE CRISTAL! 🤖\n\nQue os antigos o protejam nesta jornada!", 
     fg="gold", 
     bg="black", 
     font=("Helvetica", 18),
