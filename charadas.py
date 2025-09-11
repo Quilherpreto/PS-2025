@@ -7,40 +7,23 @@ root.geometry("{0}x{1}+0+0".format(root.winfo_screenwidth(), root.winfo_screenhe
 
 # Variáveis para armazenar as perguntas e respostas
 questions = [
-    "Charada 1:\n\n*Não se pode ver, não se pode sentir,*\n\n*Não se pode cheirar, não se pode ouvir.*\n\n*Está sob as colinas e além das estrelas,*\n\n*Cavidades vazias – ele vai enchê-las.*\n\n*De tudo vem antes e vem em seguida,*\n\n*Do riso é a morte, é o fim da vida.*\n\nIMPORTANTE: Responda em letras minúsculas!",
-    "Charada 2:\n\n*Essa é a coisa que a tudo devora*\n\n*Feras, aves, plantas, flora.*\n\n*Aço e ferro são sua comida,*\n\n*E a dura pedra por ele moída;*\n\n*Aos reis abate, à cidade arruína,*\n\n*E a alta montanha faz pequenina.*",
-    "Charada 3:\n\nJuntos, um Mago, um Cavalheiro, um Bárbaro e um Eremita receberam 70 Esmeraldas.\n\nCada um recebeu um número inteiro de Esmeraldas e cada um recebeu pelo menos um.\n\nO Mago recebeu mais do que cada um dos outros.\n\nO Cavalheiro e o Bárbaro receberam, juntos, 45 Esmeraldas.\n\nQuantas Esmeraldas sobraram para o Eremita?",
-    "Charada 4:\n\nCerto dia, um sábio matemático, disposto de seu Camelo, caminhavam longamente em direção à cidade de Bagdá. No entanto, em seu caminho, encontrou três irmãos em profundo debate. Ao se informar da situação, eis o problema:\n\n• Um antigo nobre partiu em sua jornada final e deixou 17 Camelos como herança para a partilha entre seus três filhos, ordenando a seguinte divisão:\n• O mais velho deverá receber a metade.\n• O do meio deverá receber a terça parte.\n• O mais novo deverá receber apenas a nona parte.\n\nPorém, ao tentar dividir, os irmãos se desesperaram: 17 não se divide exatamente nessas partes.\n\nQuantos Camelos serão dispostos a cada irmão de modo que a partilha seja exata e ninguém fique em desvantagem?\n\n(Separe os números encontrados por vírgula e sem espaços)",
-    "Charada 5:\n\nObserve atentamente esta sequência numérica:\n\n1, 4, 9, 16, 25, __ ?\n\nQual é o próximo número e por quê?\n\nResponda apenas o número que completa a sequência.",
-    "Charada 6:\n\nVocê tem 3 caixas: uma com bolas vermelhas, uma com bolas azuis, e uma com bolas mistas (vermelhas e azuis).\n\nTodas as etiquetas das caixas estão trocadas.\n\nVocê pode tirar apenas 1 bola de uma caixa para descobrir o conteúdo de todas.\n\nDe qual caixa você deve tirar?\n\nResponda: vermelhas, azuis ou mistas",
-    "Charada 7:\n\nEm uma família há 5 meninas e alguns meninos.\n\nO número total de filhos é 8.\n\nQuantos meninos há na família?\n\nResponda apenas o número.",
-    "Charada 8:\n\nUm pai tem 32 anos e seu filho tem 8 anos.\n\nEm quantos anos a idade do pai será o dobro da idade do filho?\n\nResponda apenas o número de anos.",
+    "Charada 1:\n\nVocê tem 3 caixas: uma com bolas vermelhas, uma com bolas azuis, e uma com bolas mistas (vermelhas e azuis).\n\nTodas as etiquetas das caixas estão trocadas.\n\nVocê pode tirar apenas 1 bola de uma caixa para descobrir o conteúdo de todas.\n\nDe qual caixa você deve tirar?\n\nResponda: vermelhas, azuis ou mistas\n\nIMPORTANTE: Responda em letras minúsculas!",
+    "Charada 2:\n\nObserve atentamente esta sequência numérica:\n\n1, 4, 9, 16, 25, __ ?\n\nQual é o próximo número e por quê?\n\nResponda apenas o número que completa a sequência.",
+    "Charada 3:\n\nUm pai tem 32 anos e seu filho tem 8 anos.\n\nEm quantos anos a idade do pai será o dobro da idade do filho?\n\nResponda apenas o número de anos.",
+    "Charada 4:\n\nJuntos, um Mago, um Cavalheiro, um Bárbaro e um Príncipe receberam 70 Esmeraldas.\n\nCada um recebeu um número inteiro de Esmeraldas e cada um recebeu pelo menos um.\n\nO Mago recebeu mais do que cada um dos outros.\n\nO Cavalheiro e o Bárbaro receberam, juntos, 45 Esmeraldas.\n\nQuantas Esmeraldas sobraram para o Príncipe?",
+    "Charada 5:\n\n*Essa é a coisa que a tudo devora*\n\n*Feras, aves, plantas, flora.*\n\n*Aço e ferro são sua comida,*\n\n*E a dura pedra por ele moída;*\n\n*Aos reis abate, à cidade arruína,*\n\n*E a alta montanha faz pequenina.*\n\nIMPORTANTE: Responda em letras minúsculas!",
+    "Charada 6:\n\n*Não se pode ver, não se pode sentir,*\n\n*Não se pode cheirar, não se pode ouvir.*\n\n*Está sob as colinas e além das estrelas,*\n\n*Cavidades vazias – ele vai enchê-las.*\n\n*De tudo vem antes e vem em seguida,*\n\n*Do riso é a morte, é o fim da vida.*\n\nIMPORTANTE: Responda em letras minúsculas!",
     "DESAFIO FINAL - XADREZ:\n\nPARABÉNS! Você decifrou todos os enigmas do templo!\n\nAgora, para escapar definitivamente, você deve resolver o último mistério:\n\nO TABULEIRO DE XADREZ na sala contém a chave final.\n\nExamine-o cuidadosamente e encontre o CÓDIGO SECRETO.\n\nQuando descobrir, digite-o aqui para prosseguir.\n\n(Procure nas peças, no tabuleiro ou ao redor dele)",
 ]
 
 answers = [
-    "escuro",  # Charada 1 - O Hobbit
-    "tempo",   # Charada 2 - O Hobbit
-    "1",       # Charada 3 - Esmeraldas do Eremita
-    "9,6,2",   # Charada 4 - Divisão dos Camelos
-    "36",      # Charada 5 - Sequência dos quadrados perfeitos
-    "mistas",  # Charada 6 - Problema das caixas com bolas
-    "3",       # Charada 7 - Problema simples dos meninos (8 total - 5 meninas = 3 meninos)
-    "16",      # Charada 8 - Problema das idades (em 16 anos: pai 48, filho 24)
-    "XADREZ2025",  # Desafio Final - Código do tabuleiro de xadrez (você define este código)
-]
-
-# Dicas para cada charada
-hints = [
-    "Dica: Pense no que não pode ser percebido pelos sentidos, mas está em todo lugar. Uma palavra de 6 letras...",
-    "Dica: Pense no que desgasta tudo, envelhece reis e montanhas. Uma palavra de 5 letras...",
-    "Dica: Total = 70. Cavalheiro + Bárbaro = 45. Restam 25 para Mago + Eremita. O Mago tem mais que todos os outros...",
-    "Dica: O sábio emprestou seu camelo! Com 18 camelos: metade=9, terça parte=6, nona parte=2. Total: 17!",
-    "Dica: Pense nos quadrados! 1² = 1, 2² = 4, 3² = 9... Qual seria 6²?",
-    "Dica: Tire da caixa que tem certeza de que não é o que está escrito. Qual caixa te dará mais informação?",
-    "Dica: Uma conta simples! Se há 5 meninas e o total é 8 filhos, quantos meninos restam? 8 - 5 = ?",
-    "Dica: Pai: 32+x anos, Filho: 8+x anos. Quando pai = 2×filho? Monte a equação: 32+x = 2(8+x)",
-    "Dica: Examine o tabuleiro físico na sala! Procure por peças em posições especiais, anotações ou códigos escondidos.",
+    "mistas",  # Charada 1 - Problema das caixas com bolas (FÁCIL)
+    "36",      # Charada 2 - Sequência dos quadrados perfeitos (FÁCIL-MÉDIO)
+    "16",      # Charada 3 - Problema das idades (MÉDIO)
+    "1",       # Charada 4 - Esmeraldas do Príncipe (MÉDIO-DIFÍCIL)
+    "tempo",   # Charada 5 - O Hobbit (DIFÍCIL)
+    "escuro",  # Charada 6 - O Hobbit (DIFÍCIL)
+    "XADREZ2025",  # Desafio Final - Código do tabuleiro de xadrez
 ]
 
 # Índice da pergunta atual
@@ -49,37 +32,39 @@ question_index = 0
 # Variável para controlar se o jogo foi iniciado
 game_started = False
 
-# Variável para controlar se a dica foi usada na pergunta atual
-hint_used = False
-
 # Variável para contar erros na pergunta atual
 errors_count = 0
 
 # Variável para armazenar o tempo restante
 time_left = 2400  # 40 minutos
 
-# Função para mostrar dica
-def show_hint():
-    global time_left, hint_used
+# Função para descontar tempo baseado na dificuldade
+def discount_time():
+    global time_left
     
-    # Não permitir dicas no desafio do xadrez (última pergunta)
+    # Não permitir no desafio do xadrez (última pergunta)
     if question_index == len(questions) - 1:
-        messagebox.showinfo("Desafio Direto", "Este é um desafio físico! Examine o tabuleiro de xadrez na sala para encontrar o código.")
+        messagebox.showinfo("Desafio Final", "Não é possível usar oráculos no desafio final! Examine o tabuleiro de xadrez na sala.")
         return
     
-    if not hint_used:
-        # Penalizar em 60 segundos
-        time_left -= 60
-        hint_used = True
-        
-        # Mostrar a dica
-        hint_label.config(text=hints[question_index])
-        hint_button.config(state=DISABLED, text="DEUSES INVOCADOS", bg="gray", fg="black")
-        
-        messagebox.showinfo("Sabedoria dos Antigos", f"Os deuses sussurram em seu ouvido! Penalidade: -60 segundos\n\n{hints[question_index]}")
-    else:
-        messagebox.showinfo("Silêncio dos Deuses", "Os antigos já lhe concederam sua sabedoria nesta câmara!")
-
+    # Definir desconto baseado na dificuldade
+    if question_index <= 1:  # Charadas 1-2 (FÁCEIS)
+        discount = 300  # 5 minutos
+        oracle_type = "Oráculo Simples"
+    elif question_index <= 3:  # Charadas 3-4 (MÉDIAS)
+        discount = 180  # 3 minutos
+        oracle_type = "Oráculo Complexo"
+    else:  # Charadas 5-6 (DIFÍCEIS)
+        discount = 120  # 2 minutos
+        oracle_type = "Oráculo Supremo"
+    
+    # Aplicar desconto
+    time_left -= discount
+    
+    # Desabilitar o botão após usar a única dica
+    help_button.config(state=DISABLED, bg="gray")
+    
+    messagebox.showinfo("Oráculo Invocado", f"🔮 {oracle_type}\nPreço: -{discount//60} minutos")
 
 # Função para atualizar o temporizador
 def update_timer():
@@ -104,129 +89,54 @@ def update_timer():
 
 # Função para verificar a resposta
 def check_answer():
-    global question_index, time_left, hint_used, errors_count
-    # Pegar o valor da entrada de texto
+    global question_index, time_left, errors_count
     answer = answer_entry.get()
-    # Verificar se a resposta está correta
     if answer == answers[question_index]:
-        # Avançar para a próxima pergunta
         question_index += 1
-        # Resetar a dica e erros para a próxima pergunta
-        hint_used = False
         errors_count = 0
-        hint_label.config(text="")
-        hint_button.config(state=NORMAL, text="INVOCAR OS DEUSES (-60s)", bg="darkred", fg="white")
         
-        # Se ainda houver perguntas, mostrar a próxima pergunta
         if question_index < len(questions):
             question.config(text=questions[question_index])
-            # Limpar a entrada de texto
             answer_entry.delete(0, "end")
             
-            # Desabilitar dicas no desafio do xadrez (última pergunta)
-            if question_index == len(questions) - 1:  # É o desafio do xadrez
-                hint_button.config(state=DISABLED, text="SEM DICAS - BUSQUE FISICAMENTE", bg="gray", fg="black")
-                hint_label.config(text="⚔️ DESAFIO DIRETO: Examine o tabuleiro na sala! ⚔️")
+            # REABILITAR BOTÃO VERMELHO PARA A NOVA CHARADA (exceto xadrez)
+            if question_index == len(questions) - 1:
+                help_button.config(state=DISABLED, bg="gray")
+            else:
+                help_button.config(state=NORMAL, bg="red")  # Reabilita para nova charada
         else:
-            # TELA FINAL ENIGMÁTICA - esconder todos os elementos do jogo
+            # Ir para tela final
             question.pack_forget()
-            hint_label.pack_forget()
             answer_entry.pack_forget()
-            hint_button.pack_forget()
+            help_button.place_forget()
             check_button.pack_forget()
             timer_label.pack_forget()
             
-            # Criar tela final misteriosa para o código morse
-            final_screen = Label(
-                root,
-                text="""═══════════════════════════════════════════════════════════════
-
-🏆 MISSÃO CONCLUÍDA COM SUCESSO! 🏆
-
-Você decifrou todos os enigmas e o código do xadrez!
-Como um verdadeiro arqueólogo, superou cada desafio.
-
-═══════════════════════════════════════════════════════════════
-
-⚡ O ÚLTIMO MISTÉRIO AGUARDA ⚡
-
-Uma antiga lâmpada começa a piscar mysteriosamente...
-Luzes que dançam em padrões ancestrais...
-Mensagens codificadas através da luz e sombra...
-
-👁️ OBSERVE ATENTAMENTE OS SINAIS DE LUZ 👁️
-
-A lâmpada revelará sequências secretas...
-Pontos e traços perdidos no tempo...
-Um código que abrirá o cadeado final...
-
-═══════════════════════════════════════════════════════════════
-
-⚠️  INSTRUÇÕES FINAIS  ⚠️
-
-1. Aguarde a lâmpada começar a piscar
-2. Anote cada sequência de luz
-3. Decodifique a mensagem ancestral  
-4. Use o código para abrir o cadeado
-5. Descubra o tesouro final!
-
-═══════════════════════════════════════════════════════════════
-
-A aventura está quase no fim...
-Que a luz guie seus passos! ⚡✨""",
-                fg="gold",
-                bg="black",
-                font=("Courier", 14),
-                justify=CENTER
-            )
+            final_screen = Label(root, text="🏆 MISSÃO CONCLUÍDA! 🏆\n\n⚡ O ÚLTIMO MISTÉRIO AGUARDA ⚡\n\nObserve a lâmpada piscar...", fg="gold", bg="black", font=("Courier", 16), justify=CENTER)
             final_screen.pack(expand=True)
-            
-            # Fazer a tela piscar sutilmente para simular a lâmpada
-            def piscar_tela():
-                cores = ["black", "#0a0a0a", "black", "#050505"]
-                cor_atual = 0
-                def alternar_cor():
-                    nonlocal cor_atual
-                    root.configure(bg=cores[cor_atual % len(cores)])
-                    final_screen.configure(bg=cores[cor_atual % len(cores)])
-                    cor_atual += 1
-                    root.after(1500, alternar_cor)
-                alternar_cor()
-            
-            # Iniciar o efeito de piscar após 2 segundos
-            root.after(2000, piscar_tela)
     else:
-        # Incrementar contador de erros na pergunta atual
         errors_count += 1
-        
-        # Sistema de penalidade progressiva (máximo 15s)
         if errors_count == 1:
             penalty = 5
-            message = "Perigos menores ativados! -5 segundos"
+            message = "Perigos menores! -5 segundos"
         elif errors_count == 2:
             penalty = 10
-            message = "Armadilhas antigas dispararam! -10 segundos"
-        else:  # 3 ou mais erros - sempre 15s (não acumulativo)
+            message = "Armadilhas ativadas! -10 segundos"
+        else:
             penalty = 15
-            message = f"Fuga urgente necessária! -{penalty} segundos"
+            message = f"Fuga urgente! -{penalty} segundos"
         
-        # Aplicar penalidade
         time_left -= penalty
-        messagebox.showinfo("Perigo no Templo!", f"{message}\n\nTente decifrar novamente o enigma!")
+        messagebox.showinfo("Perigo!", f"{message}\n\nTente novamente!")
 
 
 # Criar elementos do jogo (inicialmente ocultos)
 question = Label(
     root, text=questions[question_index], fg="white", bg="black", 
-    font=("Helvetica", 18), wraplength=1000, justify=LEFT
+    font=("Helvetica", 18), wraplength=1000, justify=CENTER  # Mudança: CENTER
 )
 
-# Label para mostrar a dica (inicialmente vazio)
-hint_label = Label(
-    root, text="", fg="yellow", bg="black", font=("Helvetica", 16), wraplength=1000
-)
-
-answer_entry = Entry(root, width=50, fg="white", bg="black", font=("Helvetica", 18))
+answer_entry = Entry(root, width=50, fg="white", bg="black", font=("Helvetica", 18), justify=CENTER)  # Mudança: justify=CENTER
 
 # Adicionar um rótulo para o temporizador (inicialmente oculto)
 timer_label = Label(
@@ -237,16 +147,15 @@ timer_label = Label(
     font=("Helvetica", 16),
 )
 
-# Criar botões (inicialmente ocultos)
-hint_button = Button(
+# Botão vermelho redondo no canto (sem texto)
+help_button = Button(
     root,
-    text="INVOCAR OS DEUSES (-60s)",
-    command=show_hint,
+    text="",
+    command=discount_time,
     fg="white",
-    bg="darkred",
-    font=("Helvetica", 25, "bold"),
-    padx=30,
-    pady=15
+    bg="red",
+    width=3,
+    height=1
 )
 
 check_button = Button(
@@ -265,35 +174,28 @@ def start_game():
     global game_started
     game_started = True
     
-    # Esconder elementos da tela inicial
     title_label.pack_forget()
     start_button.pack_forget()
     
-    # Mostrar elementos do jogo
-    question.pack(pady=20)
-    hint_label.pack(pady=5)  # Espaço para a dica
-    answer_entry.pack(pady=15)
-    answer_entry.focus_set()  # Faz o cursor aparecer na caixa de entrada
+    # BOTÃO VERMELHO SEMPRE VISÍVEL
+    help_button.place(x=root.winfo_screenwidth()-150, y=20)
+    help_button.config(state=NORMAL, bg="red")
     
-    # BOTÃO DE DICA PRIMEIRO - bem visível
-    hint_button.pack(pady=10)
+    question.pack(pady=(100, 30))
+    answer_entry.pack(pady=20)
+    answer_entry.focus_set()
+    check_button.pack(pady=30)
+    timer_label.pack(pady=20)
     
-    # Depois o botão de verificar
-    check_button.pack(pady=10)
-    
-    # Timer por último
-    timer_label.pack(pady=10)
-    
-    # Iniciar o temporizador
     update_timer()
 
 # Tela inicial
 title_label = Label(
     root, 
-    text="EXPEDIÇÃO ARQUEOLÓGICA\nTEMPLO DOS ENIGMAS PERDIDOS\n\nVocê adentra um templo misterioso com 8 câmaras antigas!\nCada câmara guarda um enigma ancestral que deve ser decifrado.\n\nApós as charadas, o DESAFIO FINAL DO XADREZ o aguarda!\n\nTEMPO LIMITE: 40 minutos antes que as armadilhas se ativem!\n\nSISTEMA DE PENALIDADES POR CÂMARA:\n• 1º erro: Perigos menores (-5s)\n• 2º erro: Armadilhas ativadas (-10s) \n• 3º+ erro: Fuga urgente (-15s)\n• Pedir ajuda aos deuses: (-60s)\n\nQue os antigos o protejam nesta jornada!", 
+    text="EXPEDIÇÃO ARQUEOLÓGICA\nTEMPLO DOS ENIGMAS PERDIDOS\n\nVocê adentra um templo misterioso com 6 câmaras antigas!\nCada câmara guarda um enigma ancestral que deve ser decifrado.\n\nApós as charadas, o DESAFIO FINAL DO XADREZ o aguarda!\n\nTEMPO LIMITE: 40 minutos antes que as armadilhas se ativem!\n\nSISTEMA DE PENALIDADES POR CÂMARA:\n• 1º erro: Perigos menores (-5s)\n• 2º erro: Armadilhas ativadas (-10s) \n• 3º+ erro: Fuga urgente (-15s)\n\n🔮 SISTEMA DE ORÁCULOS E DICAS ANCESTRAIS 🔮\nCada charada possui APENAS 1 DICA ÚNICA!\nOs 2 LADOS devem decidir estrategicamente quando usar:\n• Oráculos Simples: 1 dica fácil (-5 minutos)\n• Oráculos Complexos: 1 dica média (-3 minutos)\n• Oráculos Supremos: 1 dica difícil (-2 minutos)\n\n🚫 ATENÇÃO EXPLORADORES! 🚫\nNÃO APERTEM O BOTÃO VERMELHO!\nEle desconta tempo precioso da expedição!\nApenas os MESTRES da expedição podem ativá-lo!\n\nUma vez usado, não há mais dicas para aquela charada!\nEscolham sabiamente o momento certo!\n\nQue os antigos o protejam nesta jornada!", 
     fg="gold", 
     bg="black", 
-    font=("Helvetica", 20),
+    font=("Helvetica", 18),
     justify=CENTER
 )
 title_label.pack(expand=True)
@@ -310,5 +212,4 @@ start_button = Button(
 )
 start_button.pack(pady=20)
 
-# Iniciar o loop principal (o timer só inicia quando o jogo começar)
 root.mainloop()
