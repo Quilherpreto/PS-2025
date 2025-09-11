@@ -135,13 +135,7 @@ Um código que abrirá o cadeado final...
 
 ═══════════════════════════════════════════════════════════════
 
-⚠️  INSTRUÇÕES FINAIS  ⚠️
-
-1. Aguarde a lâmpada começar a piscar
-2. Anote cada sequência de luz
-3. Decodifique a mensagem ancestral  
-4. Use o código para abrir o cadeado
-5. Encontre o DROIDINHO DE CRISTAL escondido!
+Encontre o DROIDINHO DE CRISTAL escondido!
 
 ═══════════════════════════════════════════════════════════════
 
